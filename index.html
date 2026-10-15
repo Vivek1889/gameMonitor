@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Run Card Counter + Laad Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+
+    <header class="top">
+      <div class="logo" aria-hidden="true">🃏</div>
+      <div class="title">
+        <h1>Run Card Counter + <span>Laad Tracker</span></h1>
+        <p class="tagline"><span>Count your runs</span><i>|</i><span>Track your laad</span><i>|</i><span>Play smart</span></p>
+      </div>
+      <div class="controls">
+        <button class="pill" id="gameBtn" aria-pressed="false">🎮 <span>Game Mode</span></button>
+        <button class="pill round" id="themeBtn" aria-label="Toggle theme">☀</button>
+      </div>
+    </header>
+
+    <section class="card">
+      <div class="sec-head">
+        <div class="sec-ico" aria-hidden="true">🃏</div>
+        <div>
+          <h2>Run Card Counter</h2>
+          <p>Track your Hukum, Paan, Chidi and Eent cards.</p>
+        </div>
+      </div>
+
+      <div class="counter-grid">
+        <div class="suit hukum" data-suit="hukum">
+          <div class="suit-ico">♛</div>
+          <div class="suit-name">Hukum</div>
+          <div class="suit-count">0</div>
+          <div class="btn-row">
+            <button class="btn minus" data-act="dec" aria-label="Decrease Hukum">−</button>
+            <button class="btn plus" data-act="inc" aria-label="Increase Hukum">+</button>
+          </div>
+        </div>
+        <div class="suit paan" data-suit="paan">
+          <div class="suit-ico">♠</div>
+          <div class="suit-name">Paan</div>
+          <div class="suit-count">0</div>
+          <div class="btn-row">
+            <button class="btn minus" data-act="dec" aria-label="Decrease Paan">−</button>
+            <button class="btn plus" data-act="inc" aria-label="Increase Paan">+</button>
+          </div>
+        </div>
+        <div class="suit chidi" data-suit="chidi">
+          <div class="suit-ico">♣</div>
+          <div class="suit-name">Chidi</div>
+          <div class="suit-count">0</div>
+          <div class="btn-row">
+            <button class="btn minus" data-act="dec" aria-label="Decrease Chidi">−</button>
+            <button class="btn plus" data-act="inc" aria-label="Increase Chidi">+</button>
+          </div>
+        </div>
+        <div class="suit eent" data-suit="eent">
+          <div class="suit-ico">♦</div>
+          <div class="suit-name">Eent</div>
+          <div class="suit-count">0</div>
+          <div class="btn-row">
+            <button class="btn minus" data-act="dec" aria-label="Decrease Eent">−</button>
+            <button class="btn plus" data-act="inc" aria-label="Increase Eent">+</button>
+          </div>
+        </div>
+
+        <div class="total">
+          <div class="total-label">📊 Total Runs</div>
+          <div class="total-num" id="totalRuns">0</div>
+          <button class="btn reset-all" id="resetRuns">↻ Reset All</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="sec-head wrap">
+        <div class="sec-ico" aria-hidden="true">👥</div>
+        <div class="grow">
+          <h2>Laad Tracker</h2>
+          <p>Add players and track their laad count.</p>
+        </div>
+        <form class="add" id="addForm">
+          <input id="playerName" type="text" placeholder="👤  Enter player name..." maxlength="20" autocomplete="off">
+          <button class="btn add-btn" type="submit">＋ Add Player</button>
+        </form>
+      </div>
+
+      <div class="table-head">
+        <span>#</span><span>Player Name</span><span>Laad Count</span><span>Actions</span>
+      </div>
+      <div id="playerList"></div>
+      <p class="empty" id="emptyMsg" hidden>No players yet. Add one above.</p>
+
+      <div class="foot">
+        <button class="btn reset-all" id="resetLaad">↻ Reset All Laad</button>
+        <button class="btn remove" id="removeAll">🗑 Remove All Players</button>
+      </div>
+    </section>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
