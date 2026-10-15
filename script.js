@@ -6,13 +6,7 @@
 
   const defaults = {
     runs: { hukum: 0, paan: 0, chidi: 0, eent: 0 },
-    players: [
-      { name: "Vivek", laad: 5 },
-      { name: "Rohit", laad: 3 },
-      { name: "Aman", laad: 8 },
-      { name: "Sumit", laad: 2 },
-      { name: "Pankaj", laad: 6 },
-    ],
+    players: [],
     theme: "dark",
     game: false,
   };
